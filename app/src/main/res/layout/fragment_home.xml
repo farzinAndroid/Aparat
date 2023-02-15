@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.HomeFragment">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_160dp" />
+
+<!--                <com.rd.PageIndicatorView-->
+<!--                    android:id="@+id/pageIndicatorView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:piv_animationType="scale"-->
+<!--                    app:piv_dynamicCount="true"-->
+<!--                    app:piv_interactiveAnimation="true"-->
+<!--                    app:piv_selectedColor="@color/pink"-->
+<!--                    app:piv_unselectedColor="@color/white"-->
+<!--                    app:piv_viewPager="@id/pager"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    />-->
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    app:dotsColor="@color/white"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="16dp"
+                    app:dotsSpacing="4dp"
+                    app:dotsWidthFactor="2.5"
+                    app:progressMode="false"
+                    app:selectedDotColor="@color/pink" />
+
+<!--                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator-->
+<!--                    android:id="@+id/spring_dots_indicator"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:dampingRatio="0.5"-->
+<!--                    app:dotsColor="@color/white"-->
+<!--                    app:dotsStrokeColor="@color/pink"-->
+<!--                    app:dotsCornerRadius="2dp"-->
+<!--                    app:dotsSize="16dp"-->
+<!--                    app:dotsSpacing="6dp"-->
+<!--                    app:dotsStrokeWidth="2dp"-->
+<!--                    app:stiffness="300"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_alignParentBottom="true"-->
+
+<!--                    />-->
+
+<!--                <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator-->
+<!--                    android:id="@+id/worm_dots_indicator"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:dotsColor="@color/white"-->
+<!--                    app:dotsStrokeColor="@color/pink"-->
+<!--                    app:dotsCornerRadius="8dp"-->
+<!--                    app:dotsSize="16dp"-->
+<!--                    app:dotsSpacing="4dp"-->
+<!--                    app:dotsStrokeWidth="2dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    />-->
+
+
+            </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_new"
+        android:layout_width="@dimen/d_140_dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:background="@drawable/bg_service"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/new_videos"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_150dp"
+        >
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_new_videos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_8dp" />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_special"
+        android:layout_width="@dimen/d_140_dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:background="@drawable/bg_service"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/special_videos"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_150dp"
+        >
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progress2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_special_videos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_best"
+        android:layout_width="@dimen/d_140_dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:background="@drawable/bg_service"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/best_videos"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progress3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_best_videos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/d_32dp"
+            android:layout_marginTop="@dimen/dimen_8dp" />
+
+    </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</LinearLayout>

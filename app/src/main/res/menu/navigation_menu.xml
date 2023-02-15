@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="@string/home"
+        android:icon="@drawable/home"
+        android:id="@+id/nav_home"
+        />
+
+    <item
+        android:title="@string/category"
+        android:icon="@drawable/category"
+        android:id="@+id/nav_category"
+        />
+
+    <item
+        android:title="@string/favorite"
+        android:icon="@drawable/favorite"
+        android:id="@+id/nav_favorite"
+        />
+
+    <item
+        android:title="@string/settings"
+        android:icon="@drawable/settings"
+        android:id="@+id/nav_settings"
+        />
+
+    <item
+        android:title="@string/rate_app"
+        android:icon="@drawable/rate_star"
+        android:id="@+id/nav_rate"
+        />
+
+    <item
+        android:title="@string/login"
+        android:icon="@drawable/login"
+        android:id="@+id/nav_login"
+        />
+</menu>
